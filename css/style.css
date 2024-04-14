@@ -1,0 +1,1507 @@
+@charset "UTF-8";
+
+/* ＝＝＝＝＝＝＝＝共通設定＝＝＝＝＝＝＝＝＝ */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    font-size: 0.9rem;
+}
+
+/* それぞれのドット */
+.dots-class {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid; */
+    margin-top: 10px;
+}
+
+.dots-class li {
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 6px;
+    margin-right: 22px;
+    transition: background-color 0.5s ease;
+    width: 6px;
+}
+
+.dots-class button {
+    font-size: 0;
+
+}
+
+
+/* 今表示してるスライドのドット */
+.dots-class li.slick-active {
+    background-color: #343e48;
+}
+
+/* それぞれのドットのホバー時 */
+.dots-class li:hover {
+    background-color: #343e48;
+}
+
+.dots-class li:last-child {
+    margin-right: 0;
+}
+
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+header
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+header {
+    /* height: 40px; */
+    background-color: rgb(255, 200, 0);
+    padding: 2px 5%;
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 30;
+}
+
+main {
+    margin-top: 80px;
+}
+
+.header-img {
+    max-width: 200px;
+    height: 40px;
+    /* border: 1px solid black; */
+    /* white-space: nowrap; */
+    /* margin-right: 5%; */
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-img img {
+    /* width: 100%; */
+    object-fit: contain;
+    margin-right: 16px;
+    /* display: block; */
+    vertical-align: bottom;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+    white-space: nowrap;
+    /* word-wrap:break-word; */
+}
+
+.header-nav li {
+    text-shadow: 1px 1px 1px rgb(135, 135, 135);
+    margin-left: 16px;
+}
+
+.header-nav li:hover {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+main-visual
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.slide-items {
+    /* width:50%; */
+    /* height:50%; */
+    margin: auto;
+    overflow: hidden;
+    /* display: flex; */
+    /* margin-bottom:1000px; */
+}
+
+.slide-items img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* slick cssを上書きするイメージ 
+   slick cssのクラス名を入れる*/
+.slick-slide {
+    margin: 0 10px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+お知らせ 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+#flow h1, #voice, #question h1{
+margin-top: 80px;
+}
+
+#news {
+    margin-top: 80px;
+    background-color: rgb(255, 230, 140);
+    /* text-align: center; */
+    padding: 10px 5%;
+    /* border: 1px solid red; */
+}
+
+
+h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 12px;
+}
+
+h1::after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 2px;
+    background-color: black;
+    bottom: -10px;
+    left: 45%;
+}
+
+.news-detail {
+    width: 100%;
+    background-color: white;
+    /* border: 1px solid black; */
+    padding: 0 30px;
+}
+
+
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    padding: 10px 0;
+}
+
+
+.date {
+    width: 10%;
+    padding-left: 20px;
+    /* border: 1px solid black; */
+}
+
+.topic-title {
+    width: 20%;
+    /* border: 1px solid black; */
+}
+
+.topic-contents {
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.news-btn {
+    width: 60%;
+    text-align: center;
+    margin: 10px auto;
+    background-color: orange;
+    border-radius: 100px;
+    letter-spacing: 5px;
+}
+
+.news-btn a:hover {
+    background-color: rgb(255, 115, 0);
+}
+
+.news-btn a:active {
+    background-color: red;
+}
+
+.news-btn a {
+    border-radius: 100px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+移住の流れ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* 1~4訂正版 */
+#flow {
+    padding: 0 5%;
+}
+
+.step {
+    position: relative;
+    background-color: rgb(255, 230, 140);
+    border: 3px solid orange;
+    width: 100%;
+    border-radius: 20px;
+    padding: 50px 3% 20px 3%;
+    /* height: 160px; */
+}
+
+.flow-upper {
+    margin-top: 100px;
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: space-between; */
+    /* border: 1px solid black; */
+    margin-bottom: 50px;
+}
+
+.flow-bottom {
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    margin-bottom: 50px;
+}
+
+.step-left {
+    margin-right: 7%;
+    margin-bottom: 100px;
+    /* border: 1px solid blue; */
+}
+
+.step-right {
+    margin-top: 100px;
+    /* border: 1px solid blue; */
+}
+
+.step-left .arrow {
+    content: "";
+    position: absolute;
+    /* width: 90%; */
+    top: 100px;
+    right: -92px;
+    transform: rotate(45deg);
+    z-index: 5;
+}
+
+.step-right .arrow {
+    content: "";
+    position: absolute;
+    /* width: 90%; */
+    top: 220px;
+    left: -90px;
+    transform: rotate(135deg);
+    z-index: 10;
+}
+
+.label {
+    position: absolute;
+    top: -36px;
+    width: 70px;
+    object-fit: cover;
+    /* border: 1px solid red; */
+    /* left: 0px; */
+    /* z-index: 10; */
+}
+
+#flow h2 {
+    font-size: 1.1rem;
+    position: relative;
+    margin-bottom: 25px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    省略記号を表示 */
+}
+
+#flow h2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: rgb(255, 106, 0);
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    z-index: 5;
+}
+
+
+.flow-detail li {
+    margin-right: 20px;
+    border-radius: 30px;
+    font-size: 1vw;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: orangered;
+}
+
+.flow-detail li a {
+    /* border: 1px solid red; */
+    /* margin-right: 10px; */
+    border-radius: 30px;
+    background-color: rgb(255, 245, 211);
+    font-size: 1vw;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    /* width: 20%; */
+    /* text-align: center; */
+    padding: 10px 10px;
+}
+
+/* 
+オレンジ部分もaタグ適用す場合
+この赤い部分もクリックできるようにしたい場合は、この赤い部分もaタグに含める必要があります。
+なのでbackground：orangered；をaタグに移動し、文字の部分をspanで囲い
+さらにbackground-color: rgb(255, 245, 211);をつけましょうあとはpaddingやmarginで調整すればいいと思います！
+*/
+
+/* 凹ボタン */
+.flow-btn {
+    width: 100%;
+    /* height: 100px; */
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.flow-btn button {
+    font-size: 1.0rem;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    /* user-select: none; */
+    cursor: pointer;
+}
+
+/* ボタンをマウスホバーしたとき、ボタンを薄くする */
+.flow-btn button:hover {
+    opacity: 0.7;
+}
+
+/* ボタンをクリックしたとき、ボタン上部に余白を作る */
+.flow-btn button:active {
+    /* margin-top: 0.2em; */
+    transform: translateY(0.2em)
+}
+
+/* 赤ボタンのスタイル */
+.flow-btn button.popular-site {
+    color: #fff;
+    background-color: red;
+    box-shadow: 0 0.3em 0 #c00000;
+}
+
+.flow-btn button.popular-site:active {
+    box-shadow: 0 0.1em 0 #c00000;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+移住者の声
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+#voice {
+    background-color: rgb(255, 230, 140);
+    padding: 10px 5% 50px 5%;
+
+}
+
+/* margin-right効いていない？ */
+.voice-contents {
+    display: flex;
+    justify-content: space-between;
+    /* display: grid; */
+}
+
+/* widthの設定の仕方 */
+.voice-topic {
+    background-color: white;
+    max-width: 30%;
+    padding: 15px 10px;
+    /* border: 1px solid red; */
+    /* position: relative; */
+}
+
+.human {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.human img {
+    width: 40%;
+    border-radius: 100%;
+    margin-right: 16px;
+    object-fit: cover;
+
+    /* 860pxでレスポンシブして画像とタイトル縦並び */
+
+    /* width: 40%;
+    display: block;
+    padding: calc(50% - 11px) 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; */
+}
+
+.human-text {
+    font-weight: bold;
+    line-height: 1.5;
+    top: 50%;
+    white-space: nowrap;
+    /* border: 1px solid black; */
+    margin: auto 0;
+    /* position: absolute;
+    content: "";
+    top: 50%; */
+}
+
+.voice-texts {
+    width: 100%;
+    padding: 0 5%;
+    margin-bottom: 30px;
+}
+
+.voice-subtitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.voice-topic a {
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+}
+
+.voice-topic a:hover {
+    /* color: red; */
+    font-weight: bold;
+}
+
+.detail-voice {
+    word-wrap: break-word;
+    line-height: 16px;
+    text-align: left;
+}
+
+.more {
+    /* border: solid 1px ; */
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+よくある質問
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+#question {
+    padding: 0 5% 50px 5%;
+}
+
+.question-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#question img {
+    object-fit: cover;
+    width: 24%;
+    /* border: 1px solid black; */
+}
+
+.comment-item {
+    /* border: 1px solid black; */
+    width: 28%;
+    padding: 20px 0;
+    border-radius: 20px;
+    /* height: 80px; */
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    position: relative;
+    margin-right: 5%;
+}
+
+.comment-item::after {
+    position: absolute;
+    content: "";
+    border-right: 16px solid rgb(236, 236, 236);
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    top: 40%;
+    left: -10px;
+}
+
+.question-texts {
+    width: 40%;
+}
+
+.yellow-box {
+    border: 1px solid rgb(238, 255, 0);
+    border-radius: 50%;
+    padding: 60px 10px;
+    background-color: rgb(255, 234, 0);
+    width: 100%;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgb(166, 166, 166);
+}
+
+.question-btns {
+    position: relative;
+}
+
+.red-btn, .blue-btn {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 48%;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 3px 0;
+}
+
+.red-btn {
+    left: 0;
+    background-color: red;
+}
+
+.blue-btn {
+    background-color: blue;
+    right: 0;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+footer
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+body {
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+footer {
+    background-color: rgb(109, 85, 0);
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.6rem;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+    VOICE（移住者の声）ページ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.voice-main-visual, .voice-width {
+    margin: 50px 5% 0 5%;
+}
+
+.voice-main-visual img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 280px;
+    object-position: left 0px;
+}
+
+.voice-main-visual {
+    /* width: 100%; */
+    height: 300px;
+    background-color: rgb(255, 230, 140);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+/* google fontで文字書式を部分的に変えたい */
+.voice-No {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -5px;
+    background-color: rgb(163, 114, 95);
+    color: white;
+    font-weight: bold;
+    padding: 3px 14px;
+    font-size: 0.7rem;
+    transform: rotate(-15deg);
+}
+
+.voice-visual-text {
+    background-color: rgba(255, 255, 255, 0.623);
+    position: absolute;
+    content: "";
+    right: 24px;
+    top: 140px;
+    width: 240px;
+    padding: 10px 10px;
+    z-index: 10;
+}
+
+h3 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+    line-height: 1.1rem;
+
+}
+
+.voice-visual-text p {
+    font-size: 0.7rem;
+
+}
+
+.voice-width img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.voice-note p {
+    overflow-wrap: break-word;
+}
+
+h4 {
+    margin-bottom: 16px;
+}
+
+.voice-note1, .voice-note3, .voice-note4 {
+    display: flex;
+}
+
+.voice-left-note {
+    max-width: 35%;
+}
+
+.voice-right-note {
+    max-width: 60%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+question　よくある質問
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.question-nav, .QandA {
+    margin: 0 5% 30px 5%;
+}
+
+.question-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+}
+
+.question-nav li {
+    background-color: rgb(126, 101, 79);
+    border-radius: 10px;
+    width: 160px;
+    text-align: center;
+    padding: 3px 10px;
+    /* margin-bottom: 10px; */
+}
+
+.question-nav li a {
+    color: white;
+    display: block;
+}
+
+.answer {
+    background-color: rgb(255, 230, 140);
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.question-title {
+    background-color: rgb(126, 101, 79);
+    max-width: 200px;
+    color: white;
+    padding: 1px 1% 1px 5%;
+    margin-bottom: 16px;
+    
+}
+
+.answer-title {
+    display: flex;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 2px 2%;
+}
+
+.mark-Q {
+    width: 7%;
+    /* border: 1px solid black; */
+}
+
+.mark-Qtext {
+    /* border: 1px solid black; */
+    width: 100%
+}
+
+.answer-text {
+    display: flex;
+    /* background-color: white; */
+    margin-bottom: 10px;
+    padding: 2px 2%;
+}
+
+.mark-A {
+    width: 7%;
+    /* border: 1px solid black; */
+}
+
+.mark-Atext {
+    /* border: 1px solid black; */
+    word-break: break-word;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.answer-info {
+    width: 100%;
+}
+
+.answer-point {
+    /* border: 1px solid blue; */
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+
+.answer-point:first-of-type {
+    margin-bottom: 10px;
+}
+
+.point-title {
+    margin-bottom: 5px;
+}
+
+.point-title a {
+    font-size: 1.2rem;
+    padding-left: 20px;
+    border-bottom: 1px dotted orange;
+    font-weight: bold;
+    color: orange;
+    position: relative;
+    text-shadow: rgb(126, 101, 79) 1px 1px 1px;
+}
+
+.point-title a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    /* background-color: black; */
+    border-style: solid;
+    border-width: 12px 0 12px 13px;
+    border-color: transparent transparent transparent orange;
+    filter: drop-shadow(1px 1px 1px rgb(126, 101, 79));
+    top: 0%;
+    left: 0;
+}
+
+.point-text {
+    margin-left: 7%;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.answer-item {
+    margin-bottom: 80px;
+}
+
+.answer-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.Q-mail-contact {
+    /* position: fixed; */
+    box-shadow: 3px 5px 5px rgb(154, 154, 154);
+    background-color: rgb(219, 219, 219);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    z-index: 10;
+    padding: 5px 5px;
+    display: block;
+}
+
+.contact-hidden {
+    display: none;
+}
+
+.Q-mail-contact a {
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 33px 0;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝
+人気の移住先 SITEページ
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.japan-site {
+    padding: 0px 5% 20px 5%;
+}
+
+.japan-map {
+    /* max-width: 800px; */
+    border: 1px solid red;
+    position: relative;
+}
+
+.top-map {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+}
+
+.container {
+    position: absolute;
+}
+
+.btn-example {
+    position: absolute;
+    font-size: 1.6vw;
+    text-decoration: underline;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝
+ボタンの配置
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.btn-1 {
+    top: -37vw;
+    right: -43vw;
+    /* position: relative; */
+    /* border: 1px solid blue; */
+}
+
+/* .line1 {
+    position: relative;
+    content: "";
+    display: inline-block;
+    z-index:100;
+    top: -10vw;
+    right: -10vw;
+    width: 100px;
+    height: 10px;
+    background-color: red;
+} */
+
+.site-line {
+    position: absolute;
+    top:20px;
+    left:45%;
+    transform: rotate(45deg);
+    width: 10%;
+}
+
+
+.container .btn-2 {
+    top: -20vw;
+    right: -63vw;
+}
+
+.container .btn-3 {
+    top: -8vw;
+    right: -60vw;
+}
+
+.container .btn-4 {
+    top: -20vw;
+    right: -39vw;
+}
+
+.container .btn-5 {
+    top: -5vw;
+    right: -45vw;
+}
+
+.container .btn-6 {
+    top: -12vw;
+    right: -27vw;
+}
+
+/* ＝＝以下modalの動きコピペ＝＝ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 8887;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+}
+
+
+
+.modal-container .img {
+    background: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+.modal-container p {
+    margin-bottom: 10px;
+}
+
+.modal-container p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-content {
+    background: #FFF;
+    overflow-y: auto;
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 480px;
+    animation: show 0.6s linear 0s;
+    filter: drop-shadow(0px 2px 6px #777);
+}
+
+.modal-top {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.modal-close {
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0 8px;
+}
+
+.modal-close:hover, .modal-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    color: #FFF;
+}
+
+.modal-toggle {
+    font-weight: bold;
+}
+
+.modal-toggle:hover {
+    color: red;
+    text-shadow: 3px 3px 3px #909090;
+    transform: translateY(-5px);
+    transition: all 0.7s ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ＝＝＝＝＝＝モーダルの中身＝＝＝＝＝＝＝ */
+.modal-box {
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.modal-img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.modal-img a {
+    display: block;
+    height: 180px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 8px solid transparent;
+    /* hover時にボーダーが浮き出るように見せるため */
+    transition: all 0.3s ease;
+    /* 変化を滑らかにするため */
+}
+
+.modal-img a:hover {
+    border-color: #5a5a5a;
+}
+
+.modal-site:hover {
+    transition: all 0.3s ease;
+    /* 変化を滑らかにするため */
+    border-color: #5a5a5a;
+    transform: translateY(-5px);
+}
+
+.modal-img img {
+    /* width:100%; */
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.site-more {
+    color: black;
+    text-decoration: underline;
+    display: block;
+}
+
+.site-more:hover {
+    font-weight: bold;
+}
+
+.modal-site {
+    position: relative;
+    max-width: 300px;
+}
+
+.site-name {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-weight: bold;
+    text-shadow: 2px 4px 2px #777;
+}
+
+.site-list {
+    display: none;
+}
+
+
+@media (max-width:1000px){
+    .site-list {
+        display:block;
+        margin: 32px 0;
+    }
+
+.slist-title {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+}
+
+.list-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+    .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 80px;
+    }
+    
+    .local-list ul {
+    padding-left: 16px;
+    }
+    
+.top-map {
+    width: 45%;
+}
+
+.local-list ul li:hover {
+    transform: translateY(-3px);
+    transition: all 0.7s ease;
+}
+
+.local-list ul li a:hover{
+    color: red;
+}
+
+
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+ブレイクポイント設定
+　１）移住者の声 画像・タイトル縦並び
+　２）移住の流れ 縦並び
+　３）header nav非表示にして、jQueryでハンバーガー
+　４)お知らせ　ellipsisで表示
+　５）よくある質問 縦並び表示
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media (max-width:880px) {
+    /* header {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .header-img {
+        margin: 8px 0;
+    }
+
+
+    main {
+        margin-top: 120px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+移住のながれ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    /* .step {
+    position: relative;
+    background-color: rgb(255, 230, 140);
+    border: 3px solid orange;
+    width: 100%;
+    border-radius: 20px;
+    padding: 50px 3% 20px 3%;
+} */
+
+    .flow-upper {
+        margin-top: 0px;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .flow-bottom {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .step-left {
+        margin-bottom: 50px;
+    }
+
+    .step-right {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .step-left .arrow {
+        display: none;
+    }
+
+    .step-right .arrow {
+        display: none;
+    }
+
+
+    .flow-detail {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flow-detail li {
+        /* background-color: orangered;
+    margin-right: 20px;
+    border-radius: 30px; */
+        /* font-size: 2.0vw; */
+        /* margin-bottom: 10px;
+    padding-left: 10px; */
+        width: 40%;
+    }
+
+    .flow-detail li a {
+        font-size: 1.4vw;
+        padding: 10px 10px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+移住者の声
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+}
+
+@media (max-width: 700px) {
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+header
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    /* ハンバーガーメニュー */
+    .header-nav {
+        width: 280px;
+        background: #fff;
+        padding: 25px;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        opacity: 0;
+        overflow-y: auto;
+        transition: 0.5s;
+        z-index: 20;
+    }
+
+    .open .header-nav {
+        left: 0;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .open .header-nav li {
+        margin-bottom: 30px;
+        font-size: 1.5vw;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        right: 5%;
+        transition: 0.5s;
+        z-index: 20;
+        /* border:1px solid; */
+    }
+
+    .hamburger span {
+        /* spanはインライン要素のため */
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.5s;
+        position: absolute;
+        /*対象*/
+    }
+
+    /*
+      1本目の線の位置を設定
+      */
+    .hamburger span:nth-child(1) {
+        top: 30%;
+    }
+
+    /*
+      2本目の線の位置を設定
+      */
+    .hamburger span:nth-child(2) {
+        top: 50%;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 70%;
+    }
+
+    /*
+      1本目の線を-45度回転
+      transformで線のど真ん中の点を中心に動く
+      */
+
+    .open .hamburger span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    /*2本目の線を45度回転*/
+    .open .hamburger span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    /* 3本目 */
+    .open .hamburger span:nth-child(3) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    /* ２本目と３本目を重ねる
+      ３本の線がtop:50%となったため１本にかさなる*/
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+    お知らせ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.date {
+    display: none;
+}
+
+.topic-title {
+    margin-left: 40px;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+        VOICE（移住者の声）ページ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.voice-main-visual, .voice-width {
+    margin: 20px 5%;
+}
+
+.voice-visual-text p {
+    font-size: 0.7rem;
+}
+
+.voice-width img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.voice1-img {
+    height: 160px;
+}
+
+.voice4-img {
+    height: 300px;
+}
+
+.voice-note p {
+    overflow-wrap: break-word;
+}
+
+h4 {
+    margin-bottom: 4px;
+}
+
+.voice-note3 {
+    flex-direction: column;
+}
+
+.voice-note1, .voice-note4 {
+    flex-direction: column-reverse;
+}
+
+.voice3-img {
+    width: 0;
+    height: 0;
+}
+
+.voice-left-note {
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+
+.voice-right-note {
+    max-width: 100%;
+    margin-left: 0%;
+    margin-bottom: 20px;
+}
+
+.voice-width:nth-child(n+3){
+    margin: 20px 5% 0 5%;
+}
+
+.voice-note4 .voice-left-note {
+margin-bottom: 40px;
+}
+
+.contact-hidden {
+    display: block;
+}
+
+.Q-mail-contact {
+    display: none;
+}
+
+}
+/* ブレイクポイントはiphone13/14(390×844)で設定 */
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+レスポンシブ設定
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media (max-width: 390px) {
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+header
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    header{
+        font-size: 0.7rem;
+    }
+
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+VOICEのページ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .voice-main-visual img {
+        height: 160px;
+    }
+
+    .voice-main-visual {
+        height: 180px;
+    }
+
+    .voice-visual-text {
+        right: 20px;
+        top: 90px;
+        max-width: 200px;
+        padding: 5px 10px;
+        z-index: 10;
+        text-align: center;
+        white-space: nowrap;
+        /* border: 1px solid green; */
+    }
+
+    .voice-visual-text h3 {
+        margin-bottom: 1px;
+font-size: 0.6rem;
+}
+
+.voice-visual-text p {
+    text-align: left;
+    padding-left: 20%;
+    font-size: 0.5rem;
+    }
+
+    .voice1-img {
+        height: 120px;
+    }
+
+    .voice4-img {
+        height: 200px;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+よくある質問
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+footer
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+}

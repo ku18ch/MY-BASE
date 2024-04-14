@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- 初期設定は英語enなので日本語jaへ変更 -->
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-art.png">
+    <!-- サイトタイトル -->
+    <title>My base</title>
+    <!-- CSSシートを読み込む -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- googleフォント読み込み -->
+
+
+    <!-- ローカルにslickをダウンロード -->
+    <!-- css -->
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+
+</head>
+
+<body>
+    <header>
+        <a class="header-img" href="index.html">
+            <span class="inner">
+                <img src="img/logo-art.png" alt="MY BASE logo-art">
+                <img class="logo-text" src="img/logo-text.jpg" alt="MY BASE logo-text">
+            </span>
+        </a>
+
+        <ul class="header-nav">
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#">移住の流れ</a></li>
+            <li><a href="site.html">人気の移住先</a></li>
+            <li><a href="voice.html">移住者の声</a></li>
+            <li><a href="question.html">よくある質問</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <main>
+    <div class="main-visual">
+        <ul class="slide-items">
+            <li><img src="img/farm1.jpg" alt=""></li>
+            <li><img src="img/farm2.jpg" alt=""></li>
+            <li><img src="img/farm3.jpg" alt=""></li>
+            <li><img src="img/countyrside.jpg" alt=""></li>
+            <li><img src="img/mother.jpeg" alt=""></li>
+        </ul>
+    </div>
+
+        <!-- お知らせ -->
+        <section id="news">
+            <h1 class="section-title">お知らせ</h1>
+            <div class="news-detail">
+                <a href="#">
+                    <ul class="news-contents">
+                        <li class="date">20XX.XX.XX</li>
+                        <li class="topic-title">人気の移住先</li>
+                        <li class="topic-contents">新しい情報が追加されました！</li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class="news-contents">
+                        <li class="date">20XX.XX.XX</li>
+                        <li class="topic-title">移住者の声</li>
+                        <li class="topic-contents">新しい情報が追加されました！</li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class="news-contents">
+                        <li class="date">20XX.XX.XX</li>
+                        <li class="topic-title">その他</li>
+                        <li class="topic-contents">サイトのご利用停止期間について</li>
+                    </ul>
+                </a>
+                <a href="#">
+                    <ul class="news-contents">
+                        <li class="date">20XX.XX.XX</li>
+                        <li class="topic-title">人気の移住先</li>
+                        <li class="topic-contents">新しい情報が追加されました！</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="news-btn">
+                <a>過去のお知らせはこちら</a>
+            </div>
+        </section>
+
+        <!-- 移住の流れ -->
+        <section id="flow">
+            <h1 class="section-title">移住の流れ</h1>
+
+            <div class="flow-contents">
+                <div class="flow-upper">
+                    <div class="step step-left">
+                        <img class="label" src="img/star1.png" alt="">
+                        <h2 class="flow-title">移住の目的や移住先の条件を整理</h2>
+                        <ul class="flow-detail">
+                            <li><a href="#">人気の移住先</a></li>
+                            <li><a href="#">移住者の声</a></li>
+                            <li><a href="#">よくある質問</a></li>
+                        </ul>
+                        <img class="arrow" src="img/arrow.png" alt="">
+                    </div>
+                    <div class="step step-right">
+                        <img class="label" src="img/star2.png" alt="">
+                        <h2 class="flow-title">移住候補地へ行ってみる</h2>
+                        <ul class="flow-detail">
+                            <li><a href="#">お問い合わせ</a></li>
+                            <li><a href="#">お知らせ</a></li>
+                        </ul>
+                        <img class="arrow" src="img/arrow.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="flow-bottom">
+                    <div class="step step-left">
+                        <img class="label" src="img/star3.png" alt="">
+                        <h2 class="flow-title">移住候補地を絞る</h2>
+                        <ul class="flow-detail">
+                            <li><a href="#">人気の移住先</a></li>
+                            <li><a href="#">移住者の声</a></li>
+                        </ul>
+                        <img class="arrow" src="img/arrow.png" alt="">
+                    </div>
+
+
+                    <div class="step step-right">
+                        <img class="label" src="img/star4.png" alt="">
+                        <h2 class="flow-title">住まい、仕事などを決める</h2>
+                        <ul class="flow-detail">
+                            <li><a href="#">お知らせ</a></li>
+                            <li><a href="#">移住者の声</a></li>
+                            <li><a href="#">よくある質問</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flow-btn">
+                <button class="popular-site">人気の移住先を見る</button>
+            </div>
+
+        </section>
+
+        <!-- 移住者の声 -->
+        <section id="voice">
+            <h1 class="section-title">移住者の声</h1>
+
+            <div class="voice-contents">
+                <div class="voice-topic">
+                    <div class="human">
+                        <img src="img/husband 1-1.jpeg" alt="人">
+                        <div class="human-text">
+                            <p>41歳男性</p>
+                            <p>移住先：XX県XX市</p>
+                            <p>職業　：野菜農家</p>
+                        </div>
+                    </div>
+                    <div class="voice-texts">
+                        <p class="voice-subtitle">憧れていた野菜農家に転職
+                            <br>不安もあったが地域の方のサポートで独立
+                        </p>
+                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        </div>
+                    </div>
+                    <a class="more" href="#">READ MORE</a>
+                </div>
+
+                <div class="voice-topic">
+                    <div class="human">
+                        <img src="img/man.jpg" alt="人">
+                        <div class="human-text">
+                            <p>52歳男性</p>
+                            <p>移住先：XX県XX市</p>
+                            <p>職業　：飲食店経営</p>
+                        </div>
+                    </div>
+                    <div class="voice-texts">
+                        <p class="voice-subtitle">旅先で出会った土地の良さにひかれて移住
+                            <br>いまでは地元で愛されるお店の店長
+                        </p>
+                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        </div>
+                    </div>
+                    <a class="more" href="#">READ MORE</a>
+                </div>
+
+                <div class="voice-topic">
+                    <div class="human">
+                        <img src="img/mother.jpeg" alt="人">
+                        <div class="human-text">
+                            <p>32歳女性</p>
+                            <p>移住先：XX県XX市</p>
+                            <p>職業　：専業主婦</p>
+                        </div>
+                    </div>
+                    <div class="voice-texts">
+                        <p class="voice-subtitle">子育て支援が充実
+                            <br>ママ友がたくさんできて情報交換
+                        </p>
+                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        </div>
+                    </div>
+                    <a class="more" href="#">READ MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section id="question">
+            <h1 class="section-title">よくある質問</h1>
+            <div class="question-items">
+                <img class="question-human" src="img/think.jpg" alt="考える人">
+                <p class="comment-item">もっと詳しく聞きたい...<br>身近に相談できる人がいない...</p>
+                <div class="question-texts">
+                    <div class="yellow-box">
+                        <p>よくある質問について<br>移住経験者の方から<br>生の声を集めました！！</p>
+                    </div>
+                    <div class="question-btns">
+                        <a class="red-btn" href="question.html">Q&A</a>
+                        <a class="blue-btn" href="#">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@MY BASE</p>
+    </footer>
+    <!-- jsの読み込み -->
+    <!-- スリックは2つ読み込み：jsとCss読み込み -->
+    <!-- jsは下、それ以外は上 -->
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/mian.js"></script>
+</body>
+
+</html>
