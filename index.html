@@ -10,14 +10,14 @@
     <title>My base</title>
     <!-- CSSシートを読み込む -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- googleフォント読み込み -->
 
 
     <!-- ローカルにslickをダウンロード -->
     <!-- css -->
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
 
 </head>
 
@@ -45,17 +45,17 @@
             <span></span>
         </div>
     </header>
-    
+
     <main>
-    <div class="main-visual">
-        <ul class="slide-items">
-            <li><img src="img/farm1.jpg" alt=""></li>
-            <li><img src="img/farm2.jpg" alt=""></li>
-            <li><img src="img/farm3.jpg" alt=""></li>
-            <li><img src="img/countyrside.jpg" alt=""></li>
-            <li><img src="img/mother.jpeg" alt=""></li>
-        </ul>
-    </div>
+        <div class="main-visual">
+            <ul class="slide-items">
+                <li><img src="img/farm1.jpg" alt=""></li>
+                <li><img src="img/farm2.jpg" alt=""></li>
+                <li><img src="img/farm3.jpg" alt=""></li>
+                <li><img src="img/countyrside.jpg" alt=""></li>
+                <li><img src="img/mother.jpeg" alt=""></li>
+            </ul>
+        </div>
 
         <!-- お知らせ -->
         <section id="news">
@@ -121,7 +121,7 @@
                         <img class="arrow" src="img/arrow.png" alt="">
                     </div>
                 </div>
-                
+
                 <div class="flow-bottom">
                     <div class="step step-left">
                         <img class="label" src="img/star3.png" alt="">
@@ -171,9 +171,9 @@
                         <p class="voice-subtitle">憧れていた野菜農家に転職
                             <br>不安もあったが地域の方のサポートで独立
                         </p>
-                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        <p class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                             <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                        </div>
+                        </p>
                     </div>
                     <a class="more" href="#">READ MORE</a>
                 </div>
@@ -191,9 +191,9 @@
                         <p class="voice-subtitle">旅先で出会った土地の良さにひかれて移住
                             <br>いまでは地元で愛されるお店の店長
                         </p>
-                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        <p class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                             <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                        </div>
+                        </p>
                     </div>
                     <a class="more" href="#">READ MORE</a>
                 </div>
@@ -211,9 +211,9 @@
                         <p class="voice-subtitle">子育て支援が充実
                             <br>ママ友がたくさんできて情報交換
                         </p>
-                        <div class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        <p class="detail-voice">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                             <br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                        </div>
+                        </p>
                     </div>
                     <a class="more" href="#">READ MORE</a>
                 </div>
@@ -224,8 +224,10 @@
         <section id="question">
             <h1 class="section-title">よくある質問</h1>
             <div class="question-items">
-                <img class="question-human" src="img/think.jpg" alt="考える人">
-                <p class="comment-item">もっと詳しく聞きたい...<br>身近に相談できる人がいない...</p>
+                <div class="question-comment">
+                    <img class="question-human" src="img/think.jpg" alt="考える人">
+                    <p class="comment-item">もっと詳しく聞きたい...<br>身近に相談できる人がいない...</p>
+                </div>
                 <div class="question-texts">
                     <div class="yellow-box">
                         <p>よくある質問について<br>移住経験者の方から<br>生の声を集めました！！</p>
@@ -247,8 +249,8 @@
     <!-- jsは下、それ以外は上 -->
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/mian.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/mian.js"></script>
 </body>
 
 </html>
