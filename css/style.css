@@ -74,6 +74,10 @@ main {
     margin-top: 80px;
 }
 
+.sitehtml-main {
+    margin-top: 49px;
+}
+
 .header-img {
     max-width: 200px;
     height: 40px;
@@ -147,8 +151,8 @@ main-visual
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
 お知らせ 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-#flow h1, #voice, #question h1{
-margin-top: 80px;
+#flow h1, #voice, #question h1 {
+    margin-top: 80px;
 }
 
 #news {
@@ -444,15 +448,6 @@ h1::after {
     border-radius: 100%;
     margin-right: 16px;
     object-fit: cover;
-
-    /* 860pxでレスポンシブして画像とタイトル縦並び */
-
-    /* width: 40%;
-    display: block;
-    padding: calc(50% - 11px) 0;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover; */
 }
 
 .human-text {
@@ -512,26 +507,45 @@ h1::after {
 
 .question-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    /* border: 1px solid red; */
 }
 
 #question img {
     object-fit: cover;
-    width: 24%;
+    width: 40%;
     /* border: 1px solid black; */
 }
 
-.comment-item {
+.question-comment {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    /* height: 100%; */
     /* border: 1px solid black; */
-    width: 28%;
+    /* width: 50%; */
+}
+
+
+.question-comment p{
+    font-size: 1.2rem;
+}
+.question-texts p{
+    font-size: 1.2rem;
+}
+
+.comment-item {
+    width: 50%;
     padding: 20px 0;
     border-radius: 20px;
-    /* height: 80px; */
+    height: 80px;
     background-color: rgb(236, 236, 236);
     text-align: center;
     position: relative;
     margin-right: 5%;
+    margin-top: 50px;
+    /* border: 1px solid red; */
 }
 
 .comment-item::after {
@@ -546,6 +560,7 @@ h1::after {
 
 .question-texts {
     width: 40%;
+    /* border: 1px solid red; */
 }
 
 .yellow-box {
@@ -555,7 +570,7 @@ h1::after {
     background-color: rgb(255, 234, 0);
     width: 100%;
     font-weight: bold;
-    line-height: 14px;
+    line-height: 20px;
     text-align: center;
     box-shadow: 3px 3px 10px rgb(166, 166, 166);
 }
@@ -709,7 +724,7 @@ question　よくある質問
 .question-nav {
     display: flex;
     flex-wrap: wrap;
-    gap:10px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -739,7 +754,7 @@ question　よくある質問
     color: white;
     padding: 1px 1% 1px 5%;
     margin-bottom: 16px;
-    
+
 }
 
 .answer-title {
@@ -873,12 +888,12 @@ question　よくある質問
 
 .japan-map {
     /* max-width: 800px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
 }
 
 .top-map {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: block;
     margin: 0 auto;
     width: 35%;
@@ -891,63 +906,110 @@ question　よくある質問
 .btn-example {
     position: absolute;
     font-size: 1.6vw;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝
 ボタンの配置
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 .btn-1 {
-    top: -37vw;
-    right: -43vw;
+    top: -32vw;
+    right: -48vw;
     /* position: relative; */
     /* border: 1px solid blue; */
 }
+.btn-1::after {
+    content: "＼";
+    display: block;
+margin-left: 70px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
+}
 
-/* .line1 {
-    position: relative;
-    content: "";
-    display: inline-block;
-    z-index:100;
-    top: -10vw;
-    right: -10vw;
-    width: 100px;
-    height: 10px;
-    background-color: red;
-} */
-
-.site-line {
+/* .site-line {
     position: absolute;
-    top:20px;
-    left:45%;
+    top: 20px;
+    left: 45%;
     transform: rotate(45deg);
     width: 10%;
-}
+} */
 
 
 .container .btn-2 {
-    top: -20vw;
-    right: -63vw;
+    top: -23vw;
+    right: -65vw;
+}
+
+.btn-2::after {
+    content: "／";
+    display: block;
+margin-right: 100px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
 }
 
 .container .btn-3 {
-    top: -8vw;
-    right: -60vw;
+    top: -10vw;
+    right: -58vw;
+}
+
+.btn-3::before {
+    content: "＼";
+    display: block;
+margin-right: 100px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
 }
 
 .container .btn-4 {
-    top: -20vw;
-    right: -39vw;
+    top: -19vw;
+    right: -41vw;
+}
+
+.btn-4::after {
+    content: "＼";
+    display: block;
+    margin-left: 70px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
 }
 
 .container .btn-5 {
-    top: -5vw;
+    top: -7vw;
     right: -45vw;
 }
 
+.btn-5::before {
+    content: "＼";
+    display: block;
+    margin-right: 40px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
+}
+
 .container .btn-6 {
-    top: -12vw;
-    right: -27vw;
+    top: -15vw;
+    right: -30vw;
+}
+
+.btn-6::after {
+    content: "＼";
+    display: block;
+    margin-left: 100px;
+    font-size: 45px; /* 矢印のサイズを調整 */
+    line-height: 1; /* 矢印を中央寄せにするための追加 */
+    font-weight: lighter;
+    /* text-decoration: none; */
 }
 
 /* ＝＝以下modalの動きコピペ＝＝ */
@@ -1120,47 +1182,93 @@ question　よくある質問
 }
 
 
-@media (max-width:1000px){
+@media (max-width:1000px) {
+    .sitehtml-main {
+        margin-top: 120px;
+    }
+
     .site-list {
-        display:block;
+        display: block;
         margin: 32px 0;
     }
 
-.slist-title {
-    text-align: center;
-    padding-bottom: 20px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    /* border: 1px solid red; */
-}
+    .slist-title {
+        text-align: center;
+        padding-bottom: 20px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        /* border: 1px solid red; */
+    }
 
-.list-title {
-    font-weight: bold;
-    text-decoration: underline;
-}
+    .list-title {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
     .site-nav {
         display: flex;
         flex-wrap: wrap;
         gap: 20px 80px;
     }
-    
+
     .local-list ul {
-    padding-left: 16px;
+        padding-left: 16px;
     }
-    
-.top-map {
-    width: 45%;
+
+    .top-map {
+        width: 45%;
+    }
+
+    .local-list ul li:hover {
+        transform: translateY(-3px);
+        transition: all 0.7s ease;
+    }
+
+    .local-list ul li a:hover {
+        color: red;
+    }
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+SITE（人気の移住先ページ）
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    .btn-1::after,.btn-2::after,.btn-3::before,.btn-4::after,.btn-5::before,.btn-6::after   {
+        display: none;
+    }
+
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝
+ボタンの配置
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.btn-1 {
+    top: -40vw;
+    right: -48vw;
+    /* position: relative; */
+    /* border: 1px solid blue; */
 }
 
-.local-list ul li:hover {
-    transform: translateY(-3px);
-    transition: all 0.7s ease;
+.container .btn-2 {
+    top: -28vw;
+    right: -65vw;
 }
 
-.local-list ul li a:hover{
-    color: red;
+.container .btn-3 {
+    top: -10vw;
+    right: -58vw;
 }
 
+.container .btn-4 {
+    top: -22vw;
+    right: -41vw;
+}
+
+.container .btn-5 {
+    top: -7vw;
+    right: -45vw;
+}
+
+.container .btn-6 {
+    top: -15vw;
+    right: -26vw;
+}
 
 }
 
@@ -1182,11 +1290,14 @@ question　よくある質問
         margin: 8px 0;
     }
 
-
     main {
         margin-top: 120px;
     }
 
+
+    .news-btn {
+        width: 80%;
+    }
     /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 移住のながれ
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
@@ -1244,264 +1355,401 @@ question　よくある質問
     }
 
     .flow-detail li a {
-        font-size: 1.4vw;
+        font-size: 1.0rem;
         padding: 10px 10px;
     }
 
     /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 移住者の声
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+    /* margin-right効いていない？ */
+    .voice-contents {
+        flex-direction: column;
+    }
 
+    /* widthの設定の仕方 */
+    .voice-topic {
+        max-width: 100%;
+        padding: 30px 10px;
+        margin-bottom: 20px;
+    }
+
+    .voice-topic:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .human {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .human img {
+        width: 35%;
+        margin: 20px auto;
+    }
+
+    .human-text {
+        margin: 0 auto;
+    }
+    
+    .human-text p {
+        font-size: 1.5rem;
+    }
+
+    .voice-subtitle {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .voice-texts p{
+        font-size: 1.4rem;
+    }
+    }
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+よくある質問（トップページ）
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.question-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
 }
 
-@media (max-width: 700px) {
+#question img {
+    object-fit: cover;
+    width: 50%;
+margin-left: 15%;
+    /* border: 1px solid black; */
+}
 
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.question-comment {
+    /* display: flex; */
+    flex-direction: column;
+    /* justify-content: center; */
+    /* width: 50%; */
+    /* height: 100%; */
+    /* border: 1px solid black; */
+    /* width: 50%; */
+}
+
+.comment-item {
+    width: 80%;
+    /* padding: 20px 0; */
+    border-radius: 20px;
+    /* height: 80px; */
+    /* background-color: rgb(236, 236, 236); */
+    /* text-align: center; */
+    /* position: relative; */
+    margin-right: 0%;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+
+.comment-item::after {
+    border-top: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 16px solid rgb(236, 236, 236);
+    top: -33%;
+    left: 45%;
+}
+
+.question-texts {
+    width: 40%;
+    /* border: 1px solid red; */
+}
+
+
+
+    @media (max-width: 700px) {
+
+        /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 header
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-    /* ハンバーガーメニュー */
-    .header-nav {
-        width: 280px;
-        background: #fff;
-        padding: 25px;
-        position: fixed;
-        top: 0;
-        left: -300px;
-        bottom: 0;
-        opacity: 0;
-        overflow-y: auto;
-        transition: 0.5s;
-        z-index: 20;
-    }
+        /* ハンバーガーメニュー */
+        .header-nav {
+            width: 280px;
+            background: #fff;
+            padding: 25px;
+            position: fixed;
+            top: 0;
+            left: -300px;
+            bottom: 0;
+            opacity: 0;
+            overflow-y: auto;
+            transition: 0.5s;
+            z-index: 20;
+        }
 
-    .open .header-nav {
-        left: 0;
-        opacity: 1;
-        display: flex;
-        flex-direction: column;
-        padding-top: 80px;
-    }
+        .open .header-nav {
+            left: 0;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            padding-top: 80px;
+        }
 
-    .open .header-nav li {
-        margin-bottom: 30px;
-        font-size: 1.5vw;
-    }
+        .open .header-nav li {
+            margin-bottom: 30px;
+            font-size: 1.5vw;
+        }
 
-    .hamburger {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        right: 5%;
-        transition: 0.5s;
-        z-index: 20;
-        /* border:1px solid; */
-    }
+        .hamburger {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            right: 5%;
+            transition: 0.5s;
+            z-index: 20;
+            /* border:1px solid; */
+        }
 
-    .hamburger span {
-        /* spanはインライン要素のため */
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: #333;
-        transition: all 0.5s;
-        position: absolute;
-        /*対象*/
-    }
+        .hamburger span {
+            /* spanはインライン要素のため */
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            transition: all 0.5s;
+            position: absolute;
+            /*対象*/
+        }
 
-    /*
+        /*
       1本目の線の位置を設定
       */
-    .hamburger span:nth-child(1) {
-        top: 30%;
-    }
+        .hamburger span:nth-child(1) {
+            top: 30%;
+        }
 
-    /*
+        /*
       2本目の線の位置を設定
       */
-    .hamburger span:nth-child(2) {
-        top: 50%;
-    }
+        .hamburger span:nth-child(2) {
+            top: 50%;
+        }
 
-    .hamburger span:nth-child(3) {
-        top: 70%;
-    }
+        .hamburger span:nth-child(3) {
+            top: 70%;
+        }
 
-    /*
+        /*
       1本目の線を-45度回転
       transformで線のど真ん中の点を中心に動く
       */
 
-    .open .hamburger span:nth-child(1) {
-        transform: rotate(-45deg);
-        top: 50%;
-    }
+        .open .hamburger span:nth-child(1) {
+            transform: rotate(-45deg);
+            top: 50%;
+        }
 
-    /*2本目の線を45度回転*/
-    .open .hamburger span:nth-child(2) {
-        transform: rotate(45deg);
-    }
+        /*2本目の線を45度回転*/
+        .open .hamburger span:nth-child(2) {
+            transform: rotate(45deg);
+        }
 
-    /* 3本目 */
-    .open .hamburger span:nth-child(3) {
-        transform: rotate(45deg);
-        top: 50%;
-    }
+        /* 3本目 */
+        .open .hamburger span:nth-child(3) {
+            transform: rotate(45deg);
+            top: 50%;
+        }
 
-    /* ２本目と３本目を重ねる
+        /* ２本目と３本目を重ねる
       ３本の線がtop:50%となったため１本にかさなる*/
 
 
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+        /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
     お知らせ
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-.date {
-    display: none;
-}
+        .date {
+            display: none;
+        }
 
-.topic-title {
-    margin-left: 40px;
-}
+        .topic-title {
+            margin-left: 20px;
+            width: 40%
+        }
 
 
-/* ＝＝＝＝＝＝＝＝＝＝＝＝
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+よくある質問（トップページ）
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+        .question-comment p{
+            font-size: 1rem;
+        }
+        .question-texts p{
+            font-size: 1.1rem;
+        }
+
+        .question-items {
+            flex-direction: column;
+        }
+        .question-comment {
+            width: 100%;
+            margin-right: 0;
+            align-items: center;
+            margin-bottom: 10px;
+            /* border: 1px solid red; */
+        }
+
+        .question-comment::after {
+            content: "↓";
+            display: block;
+            font-size: 50px; /* 矢印のサイズを調整 */
+            font-weight: bold;
+            line-height: 1; /* 矢印を中央寄せにするための追加 */
+            margin-top: 10px;
+        }
+
+        #question img {
+            margin-left: 5%;
+        }
+        .question-texts {
+            width: 100%;
+        }
+
+        /* ＝＝＝＝＝＝＝＝＝＝＝＝
         VOICE（移住者の声）ページ
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-.voice-main-visual, .voice-width {
-    margin: 20px 5%;
+        .voice-main-visual, .voice-width {
+            margin: 20px 5%;
+        }
+
+        .voice-visual-text p {
+            font-size: 0.7rem;
+        }
+
+        .voice-width img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .voice1-img {
+            height: 160px;
+        }
+
+        .voice4-img {
+            height: 300px;
+        }
+
+        .voice-note p {
+            overflow-wrap: break-word;
+        }
+
+        h4 {
+            margin-bottom: 4px;
+        }
+
+        .voice-note3 {
+            flex-direction: column;
+        }
+
+        .voice-note1, .voice-note4 {
+            flex-direction: column-reverse;
+        }
+
+        .voice3-img {
+            width: 0;
+            height: 0;
+        }
+
+        .voice-left-note {
+            max-width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .voice-right-note {
+            max-width: 100%;
+            margin-left: 0%;
+            margin-bottom: 20px;
+        }
+
+        .voice-width:nth-child(n+3) {
+            margin: 20px 5% 0 5%;
+        }
+
+        .voice-note4 .voice-left-note {
+            margin-bottom: 40px;
+        }
+
+        .contact-hidden {
+            display: block;
+        }
+
+        .Q-mail-contact {
+            display: none;
+        }
+
+        .human-text p {
+            font-size: 1.3rem;
+        }
+    
+        .voice-texts p{
+            font-size: 1.0rem;
+        }
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+よくある質問
+＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
 }
 
-.voice-visual-text p {
-    font-size: 0.7rem;
-}
-
-.voice-width img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.voice1-img {
-    height: 160px;
-}
-
-.voice4-img {
-    height: 300px;
-}
-
-.voice-note p {
-    overflow-wrap: break-word;
-}
-
-h4 {
-    margin-bottom: 4px;
-}
-
-.voice-note3 {
-    flex-direction: column;
-}
-
-.voice-note1, .voice-note4 {
-    flex-direction: column-reverse;
-}
-
-.voice3-img {
-    width: 0;
-    height: 0;
-}
-
-.voice-left-note {
-    max-width: 100%;
-    margin-bottom: 0px;
-}
-
-.voice-right-note {
-    max-width: 100%;
-    margin-left: 0%;
-    margin-bottom: 20px;
-}
-
-.voice-width:nth-child(n+3){
-    margin: 20px 5% 0 5%;
-}
-
-.voice-note4 .voice-left-note {
-margin-bottom: 40px;
-}
-
-.contact-hidden {
-    display: block;
-}
-
-.Q-mail-contact {
-    display: none;
-}
-
-}
-/* ブレイクポイントはiphone13/14(390×844)で設定 */
-/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    /* ブレイクポイントはiphone13/14(390×844)で設定 */
+    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 レスポンシブ設定
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-@media (max-width: 390px) {
+    @media (max-width: 390px) {
 
-    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+        /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
 header
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-    header{
-        font-size: 0.7rem;
-    }
+        header {
+            font-size: 0.7rem;
+        }
 
 
-    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
+        /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
 VOICEのページ
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-    .voice-main-visual img {
-        height: 160px;
+        .voice-main-visual img {
+            height: 160px;
+        }
+
+        .voice-main-visual {
+            height: 180px;
+        }
+
+        .voice-visual-text {
+            right: 20px;
+            top: 90px;
+            max-width: 200px;
+            padding: 5px 10px;
+            z-index: 10;
+            text-align: center;
+            white-space: nowrap;
+            /* border: 1px solid green; */
+        }
+
+        .voice-visual-text h3 {
+            margin-bottom: 1px;
+            font-size: 0.6rem;
+        }
+
+        .voice-visual-text p {
+            text-align: left;
+            padding-left: 20%;
+            font-size: 0.5rem;
+        }
+
+        .voice1-img {
+            height: 120px;
+        }
+
+        .voice4-img {
+            height: 200px;
+        }
     }
-
-    .voice-main-visual {
-        height: 180px;
-    }
-
-    .voice-visual-text {
-        right: 20px;
-        top: 90px;
-        max-width: 200px;
-        padding: 5px 10px;
-        z-index: 10;
-        text-align: center;
-        white-space: nowrap;
-        /* border: 1px solid green; */
-    }
-
-    .voice-visual-text h3 {
-        margin-bottom: 1px;
-font-size: 0.6rem;
-}
-
-.voice-visual-text p {
-    text-align: left;
-    padding-left: 20%;
-    font-size: 0.5rem;
-    }
-
-    .voice1-img {
-        height: 120px;
-    }
-
-    .voice4-img {
-        height: 200px;
-    }
-
-    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
-よくある質問
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-
-
-
-    /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 
-footer
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
-
-}
